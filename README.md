@@ -1,53 +1,53 @@
 # Spring Vue Web Application  **_(EN)_**
 
 
-** Electronics store ** - The system uses 2 entities: user and electronics. One-to-Many.
+Electronics store - The system uses 2 entities: user and electronics. One-to-Many.
 
 Roles: 
 -**_authorized user_** - can view the list of electronics, delete, add.
 -**_unauthorized user_** - can view the list of electronics
 
 ## Stack
-### `Frontend:`
+### Frontend:
 
 `directory name lab3front`
-- ** _ Language_ ** - Javascript
-- ** _ Framework _ ** - Vue
-- ** _ For requests_ ** - axios library
+- **_Language_** - Javascript
+- **_Framework_** - Vue
+- **_For requests_** - axios library
 
-### `Backend (REST API):`
+### Backend (REST API):
 
 `directory name lab2spring`
-- ** _ Language_ ** - Java
-- ** _ Framework _ ** - Spring Boot
-- ** _ Authorization_ ** - oAuth2
-- ** _ Data base** - Hibernate + MySQL
+- **_Language_** - Java
+- **_Framework_** - Spring Boot
+- **_Authorization_** - oAuth2
+- **_Data base_** - Hibernate + MySQL
 
-######Implemented as part of laboratory work in the discipline - Technology for the development of server information systems.`
+###### Implemented as part of laboratory work in the discipline - Technology for the development of server information systems.`
 
-# Веб-приложение Spring Vue ** _ (RU) _ **
+# Веб-приложение Spring Vue **_(RU) _**
 
 
-** Магазин электроники ** - В системе используются 2 объекта: пользователь и электроника. Один ко многим.
+**_Магазин электроники_** - В системе используются 2 объекта: пользователь и электроника. Один ко многим.
 
 Роли:
-- ** _ авторизованный пользователь _ ** -  может просматривать список электроники, удалять, добавлять.
-- ** _ неавторизованный пользователь _ ** -  может просматривать список электроники
+- **_ авторизованный пользователь_** -  может просматривать список электроники, удалять, добавлять.
+- **_неавторизованный пользователь_** -  может просматривать список электроники
 
 ## Стек
-### `Фронтенд:`
+### Фронтенд:
 
 `имя каталога lab3front`
-- ** _ Язык_ ** - Javascript
-- ** _ Фреймворк _ ** - Vue
-- ** _ Для запросов_ ** - библиотека axios
+- **_Язык_** - Javascript
+- **_Фреймворк _** - Vue
+- **_ Для запросов_** - библиотека axios
 
-### `Backend (REST API):`
+### Backend (REST API):
 
 `имя каталога lab2spring`
-- ** _Язык_ ** - Java
-- ** _ Фреймворк_ ** - Spring Boot
-- ** _ Авторизация_ ** - oAuth2
-- ** _ База данных ** - Гибернация + MySQL
+- **_Язык_** - Java
+- **_Фреймворк_** - Spring Boot
+- **_Авторизация_** - oAuth2
+- **_База данных** - Гибернация + MySQL
 
-######Реализовано в рамках лабораторных работ по  дисциплине - Технология разработки серверных информационных систем.`
+###### Реализовано в рамках лабораторных работ по  дисциплине - Технология разработки серверных информационных систем.`
