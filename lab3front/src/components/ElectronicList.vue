@@ -4,11 +4,12 @@
     <electronic-item
         v-for="electronic in electronics"
         :electronic="electronic"
+        :profile="profile"
         :key="electronic.id"
         @remove="$emit('remove', electronic)"
     />
   </div>
-  <h2 v-else style="color: red">
+  <h2 v-else style="color: #bf4545">
     Список электроники пуст
   </h2>
 </template>
@@ -21,6 +22,10 @@ export default {
   props: {
     electronics: {
       type: Array,
+      required: true
+    },
+    profile: {
+      type: Object,
       required: true
     }
   }

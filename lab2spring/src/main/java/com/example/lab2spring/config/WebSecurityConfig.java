@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth
 import org.springframework.boot.autoconfigure.security.oauth2.resource.PrincipalExtractor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.cors.CorsConfiguration;
@@ -30,9 +32,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         http.cors().and().csrf().disable().authorizeRequests()
                 .antMatchers("/", "/login**", "/js/**", "/error**","/electronics/profile","/sessions/me").permitAll()
                 .anyRequest().authenticated()
-                .and().logout().logoutSuccessUrl("http://localhost:8081/login").permitAll()
+                .and().logout().logoutSuccessUrl("http://localhost:8081/electronics").permitAll()
                 .and()
                 .httpBasic();
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers(HttpMethod.GET, "/electronics");
     }
 
     @Bean
