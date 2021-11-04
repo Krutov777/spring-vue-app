@@ -2,10 +2,9 @@ package com.example.lab2spring.entity;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "usr")
@@ -19,6 +18,9 @@ public class User {
     private String gender;
     private String locale;
     private LocalDateTime lastVisit;
+
+/*    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<ElectronicEntity> electronics;*/
 
     public User() {
     }
@@ -78,4 +80,12 @@ public class User {
     public void setLastVisit(LocalDateTime lastVisit) {
         this.lastVisit = lastVisit;
     }
+
+    /*public List<ElectronicEntity> getElectronics() {
+        return electronics;
+    }
+
+    public void setElectronics(List<ElectronicEntity> electronics) {
+        this.electronics = electronics;
+    }*/
 }

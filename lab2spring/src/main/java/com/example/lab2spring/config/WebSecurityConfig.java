@@ -1,5 +1,6 @@
 package com.example.lab2spring.config;
 
+import com.example.lab2spring.entity.ElectronicEntity;
 import com.example.lab2spring.entity.User;
 import com.example.lab2spring.repository.UserDetailsRepo;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
@@ -29,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
         http.cors().and().csrf().disable().authorizeRequests()
                 .antMatchers("/", "/login**", "/js/**", "/error**","/electronics/profile","/sessions/me").permitAll()
                 .anyRequest().authenticated()
-                .and().logout().logoutSuccessUrl("/").permitAll()
+                .and().logout().logoutSuccessUrl("http://localhost:8081/login").permitAll()
                 .and()
                 .httpBasic();
     }

@@ -23,10 +23,10 @@ public class ElectronicController {
     @Autowired
     private ElectronicService electronicService;
 
-    @PostMapping
-    public ResponseEntity<?> addElectronic(@RequestBody ElectronicEntity electronic) {
+    @PostMapping("/user/{userId}")
+    public ResponseEntity<?> addElectronic(@RequestBody ElectronicEntity electronic, @PathVariable String userId) {
         try {
-            electronicService.addElectronic(electronic);
+            electronicService.addElectronic(electronic, userId);
             return new ResponseEntity<>(electronic, HttpStatus.CREATED);
         } catch (ElectronicAlreadyExistException error) {
             return ResponseEntity.badRequest().body(error.getMessage());
@@ -87,5 +87,14 @@ public class ElectronicController {
         return ResponseEntity.ok(user);
     }
 
+    /*@GetMapping("/user/{userId}")
+    public ResponseEntity<?> getElectronicsForUser(@PathVariable String userId) {
+        try {
+            return ResponseEntity.ok(electronicService.getElectronicsForUser(userId));
+        }
+        catch (Exception error) {
+            return ResponseEntity.badRequest().body("Произошла ошибка!");
+        }
+    }*/
 
 }

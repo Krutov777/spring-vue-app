@@ -1,9 +1,6 @@
 package com.example.lab2spring.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class ElectronicEntity {
@@ -13,6 +10,10 @@ public class ElectronicEntity {
     private String nameModel;
     private String nameCompany;
     private Double cost;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public ElectronicEntity() {
     }
@@ -47,5 +48,13 @@ public class ElectronicEntity {
 
     public void setCost(Double cost) {
         this.cost = cost;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
