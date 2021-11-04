@@ -4,8 +4,8 @@
 Electronics store - The system uses 2 entities: user and electronics. One-to-Many.
 
 Roles: 
--**_authorized user_** - can view the list of electronics, delete, add.
--**_unauthorized user_** - can view the list of electronics
+- **_authorized user_** - can view the list of electronics, delete, add.
+- **_unauthorized user_** - can view the list of electronics
 
 ## Stack
 ### Frontend:
@@ -23,15 +23,15 @@ Roles:
 - **_Authorization_** - oAuth2
 - **_Data base_** - Hibernate + MySQL
 
-###### Implemented as part of laboratory work in the discipline - Technology for the development of server information systems.`
+###### Implemented as part of laboratory work in the discipline - Technology for the development of server information systems.
 
-# Веб-приложение Spring Vue **_(RU) _**
+# Веб-приложение Spring Vue  **_(RU)_**
 
 
 **_Магазин электроники_** - В системе используются 2 объекта: пользователь и электроника. Один ко многим.
 
 Роли:
-- **_ авторизованный пользователь_** -  может просматривать список электроники, удалять, добавлять.
+- **_авторизованный пользователь_** -  может просматривать список электроники, удалять, добавлять.
 - **_неавторизованный пользователь_** -  может просматривать список электроники
 
 ## Стек
@@ -39,8 +39,8 @@ Roles:
 
 `имя каталога lab3front`
 - **_Язык_** - Javascript
-- **_Фреймворк _** - Vue
-- **_ Для запросов_** - библиотека axios
+- **_Фреймворк_** - Vue
+- **_Для запросов_** - библиотека axios
 
 ### Backend (REST API):
 
@@ -48,6 +48,6 @@ Roles:
 - **_Язык_** - Java
 - **_Фреймворк_** - Spring Boot
 - **_Авторизация_** - oAuth2
-- **_База данных** - Гибернация + MySQL
+- **_База данных_** - Гибернация + MySQL
 
-###### Реализовано в рамках лабораторных работ по  дисциплине - Технология разработки серверных информационных систем.`
+###### Реализовано в рамках лабораторных работ по  дисциплине - Технология разработки серверных информационных систем.
