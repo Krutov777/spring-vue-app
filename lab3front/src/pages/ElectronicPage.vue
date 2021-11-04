@@ -103,11 +103,9 @@ export default {
 
     async fetchElectronics() {
       try {
-        //const response = await axios.get('http://localhost:8080/electronics#');
         axios.defaults.withCredentials = true;
         const responseElectronic = await axios.get("http://localhost:8080/electronics", {withCredentials: true});
         this.electronics = responseElectronic.data;
-        //this.electronics = Object.keys(response.data)[0];
       } catch (e) {
         alert(e.message)
       }
@@ -115,7 +113,8 @@ export default {
     async postElectronics(electronic) {
       try {
         axios.defaults.withCredentials = true;
-        await axios.post('http://localhost:8080/electronics', electronic, {withCredentials: true});
+        await axios.post('http://localhost:8080/electronics/user/'+this.profile.id, electronic, {withCredentials: true});
+        await this.fetchElectronics();
       } catch (e) {
         alert(e.message)
       }
@@ -131,7 +130,6 @@ export default {
     }
   },
   mounted() {
-
       this.getProfile();
       this.fetchElectronics();
   }

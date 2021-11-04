@@ -2,7 +2,8 @@
   <div class="navbar">
     <div @click="$router.push('/')">Electronics store(training project)</div>
     <div class="navbar_btns">
-      <my-button @click="$router.push('/electronics')">Электроника</my-button>
+      <my-button @click.prevent="logout">Logout</my-button>
+      <my-button style="margin-left: 20px" @click="$router.push('/electronics')">Электроника</my-button>
       <my-button style="margin-left: 20px" @click="$router.push('/about')">О приложении</my-button>
       <my-button style="margin-left: 20px" @click="$router.push('/login')">login</my-button>
     </div>
@@ -11,7 +12,11 @@
 
 <script>
 export default {
-
+methods: {
+  logout() {
+    window.location.href = "http://localhost:8080/logout";
+  }
+}
 }
 </script>
 
